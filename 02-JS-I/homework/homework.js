@@ -117,8 +117,8 @@ function mayorQueCincuenta(num) {
 function obtenerResto(x, y) {
   // Obten el resto de la división de "x" entre "y"
   // Tu código:
-  resto = x % y
-  return resto
+  division = x % y 
+  return division
   
 }
 
@@ -126,23 +126,20 @@ function esPar(num) {
   // Devuelve "true" si "num" es par
   // De lo contrario, devuelve "false"
   // Tu código:
-  if (num%2 == 0){
+  if(num % 2 === 0){
     return true
-  }else{
-    return false
   }
-
+  return false
 }
 
 function esImpar(num) {
   // Devuelve "true" si "num" es impar
   // De lo contrario, devuelve "false"
   // Tu código:
-  if (num%2 == 1 ){
+  if ( num % 3 !== 0){
     return true
-  }else{
-    return false
   }
+  return false
 }
 
 function elevarAlCuadrado(num) {
@@ -198,13 +195,14 @@ function esPositivo(numero) {
   //Si el número es positivo, devolver ---> "Es positivo"
   //Si el número es negativo, devolver ---> "Es negativo"
   //Si el número es 0, devuelve false
-  if(numero >= 1){
-    return 'Es positivo'
-  }else if(numero == 0){
+  if ( numero === 0){
     return false
-  }else{
-    return 'Es negativo'
+  }else if(numero > 0) {
+    return "Es positivo"
+
   }
+  return "Es negativo"
+
 }
 
 function agregarSimboloExclamacion(str) {
@@ -259,9 +257,8 @@ function deEuroAdolar(euro){
   //Supongamos que 1 euro equivale a 1.20 dólares. Escribe un programa que reciba
   //como parámetro un número de euros y calcule el cambio en dólares.
   //Escribe tu código aquí
- cambio = euro * 1.20
- return cambio 
-
+ valor = euro * 1.20
+ return valor
 }
 
 
@@ -271,14 +268,12 @@ function esVocal(letra){
   //que no se puede procesar el dato mediante el mensaje "Dato incorrecto".
   // Si no es vocal, tambien debe devolver "Dato incorrecto".
   //Escribe tu código aquí
-  if (letra == "a" || letra == "e" || letra == "i" || letra == "o" || letra == "u" ){
+  if(letra == "a" || letra == "e" || letra == "i" || letra == "o" || letra == "u"){
     return "Es vocal"
-  }else if (letra.length > 1){
-    return 'Dato incorrecto'
-  }else{
-    return 'Dato incorrecto'
+  }else if(letra.length > 1){
+    return "Dato incorrecto"
   }
-  
+  return "Dato incorrecto"
 }
 
 
