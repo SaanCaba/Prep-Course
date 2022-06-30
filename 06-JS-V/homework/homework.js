@@ -13,10 +13,11 @@ function crearUsuario() {
   this.nombre = opciones.nombre
   this.email = opciones.email
   this.password = opciones.password
+  this.saludar = ()=>{
+    return `Hola, mi nombre es ${this.nombre}`
+  }
  }
- Usuario.prototype.saludar = function(){
-  return 'Hola, mi nombre es ' + this.nombre
- }
+ 
  return Usuario
  
 }
@@ -24,9 +25,8 @@ function agregarMetodoPrototype(Constructor) {
   // Agrega un método al Constructor del `prototype`
   // El método debe llamarse "saludar" y debe devolver la string "Hello World!"
   // Tu código:
-  Constructor.prototype.saludar = function (){
-    return "Hello World!"
-  }
+  Constructor.prototype.saludar = ()=> {return "Hello World!"}
+  
 }
 
 function agregarStringInvertida() {
@@ -84,8 +84,8 @@ function crearInstanciaPersona(nombre, apellido, edad, dir) {
 function agregarMetodo() {
   //La función agrega un método "datos" a la clase Persona que toma el nombre y la edad de la persona y devuelve: 
   //Ej: "Juan, 22 años"
-  Persona.prototype.datos = function(){
-    return `${this.nombre}, ${this.edad} años`
+  Persona.prototype.datos = ()=>{
+    return `${this.nombre}, ${this.edad} a`
   }
 }
   
