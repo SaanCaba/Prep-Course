@@ -31,13 +31,16 @@ function conection(status) {
   //Cuando el estado es igual a 2, el usuario está "Away"
   //De lo contrario, presumimos que el usuario está "Offline"
   //Devolver el estado de conexión de usuario en cada uno de los casos.
-  if (status === 1){
+  if(status === 1 ){
     return "Online"
   }
-  else if (status === 2){
+  else if(status === 2){
     return "Away"
   }
+  else{
     return "Offline"
+  }
+
 }
 
 function saludo(idioma) {
@@ -47,15 +50,11 @@ function saludo(idioma) {
   // Si "idioma" es "ingles", devuelve "Hello!"
   // Si "idioma" no es ninguno de los anteiores o es `undefined` devuelve "Hola!"
   // Tu código:
-  if (idioma === 'aleman'){
-    return 'Guten Tag!'
-  }else if(idioma === 'mandarin'){
-    return 'Ni Hao!'
-  }else if(idioma === 'ingles'){
-    return 'Hello!'
-  }else{
-    return 'Hola!'
-  }
+  if(idioma === "aleman") return "Guten Tag!"
+  else if(idioma === "mandarin") return "Ni Hao!"
+  else if(idioma === "ingles") return "Hello!"
+  else return "Hola!"
+
 }
 
 function colors(color) {
@@ -84,11 +83,11 @@ function esDiezOCinco(numero) {
   // Devuelve "true" si "numero" es 10 o 5
   // De lo contrario, devuelve "false"
   // Tu código:
-  if(numero == 10 || numero == 5){
+  if(numero === 10 || numero === 5){
     return true
-  }else{
-    return false
   }
+  return false
+
   
 }
 
@@ -96,11 +95,8 @@ function estaEnRango(numero) {
   // Devuelve "true" si "numero" es menor que 50 y mayor que 20
   // De lo contrario, devuelve "false"
   // Tu código:
-  if((numero > 20) && (numero < 50)){
-    return true
-  }  
-    return false
-  
+  if(numero > 20 && numero < 50) return true
+  return false
 }
 
 function esEntero(numero) {
@@ -123,16 +119,16 @@ function fizzBuzz(numero) {
   // Si "numero" es divisible entre 5, devuelve "buzz"
   // Si "numero" es divisible entre 3 y 5 (ambos), devuelve "fizzbuzz"
   // De lo contrario, devuelve el numero
-  if(numero % 3 === 0 && numero % 5 === 0){
-    return "fizzbuzz"
+  if(numero % 5 === 0 && numero % 3 === 0){
+    return 'fizzbuzz'
+     }
+  else if(numero % 5 === 0){
+  return 'buzz'
+ }
+ else if(numero % 3 === 0){
+ return 'fizz'
   }
-  else if (numero % 5 === 0){
-    return "buzz"
-  }
-  else if(numero % 3 === 0){
-    return "fizz"
-  }
-    return numero
+  return numero
 }
 
 
@@ -190,19 +186,17 @@ function tablaDelSeis(){
   //Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
   //La función devuelve un array con los resultados de la tabla de multiplicar del 6 en orden creciente.
   //Escribe tu código aquí   
-  arrayTablaDel6 = []
-  for(let i = 0; i < 11 ; i++){
-    arrayTablaDel6.push(i*6)
+  tablaDel6 = [];
+  for(i = 0; i < 11; i++){
+    tablaDel6.push(i*6)
   }
-  return arrayTablaDel6
+  return tablaDel6
 }
 
 function tieneTresDigitos(numero){
   //Leer un número entero y retornar true si tiene 3 dígitos. Caso contrario, retorna false.
   //Escribe tu código aquí
-  if(numero > 99 && numero < 1000){
-    return true
-  }
+  if(numero > 99 && numero < 1000 ) return true
   return false
 }
 
